@@ -57,7 +57,7 @@ Assets/Textures
 
 ## General
 
-A general script is one that is used for controllers, managers, and other dynamic scripts that do not provide a MonoSystem. These can either be preloaded by the `GameManager` in cases where they are needed across different scenes, or they may be placed into a specific scene if their functionality is limited in architectural scope. The general format for a MonoBehaviour controller, manager, or other dynamic script is as follows:
+A general script is one that is used for controllers, managers, and other dynamic scripts that do not provide a MonoSystem. These can either be preloaded by the `GameManager` in cases where they are needed across different scenes, or they may be placed into a specific scene if their functionality is limited in architectural scope. The general format for a `MonoBehaviour` controller, manager, or other dynamic script is as follows:
 
 ```csharp
 // We should try to keep our namespaces organized for readability and maintainability.
