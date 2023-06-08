@@ -24,7 +24,7 @@ namespace RootName.Core
 {
     // The class definition for our GameManager is:
     // - internal to restrict access to Core architecture to the namespace.
-    // - abstract, as this class is inherited by the SunderpathGameManager script.
+    // - abstract, as this class is inherited by the RootNameGameManager script.
     // - Inherits from MonoBehaviour, so the core architecture works within
     //   Unity's MonoBehaviour framework.
    internal abstract class GameManager : MonoBehaviour
@@ -36,7 +36,7 @@ namespace RootName.Core
         private readonly MessageManager messageManager = new (); // Used for managing Message Events
         private readonly MonoSystemManager MonoSystemManager = new (); // Used for managing MonoSystems.
 
-        // At runtime, prior to any scene being loaded, we instantiate the SunderpathGameManager prefab.
+        // At runtime, prior to any scene being loaded, we instantiate the RootNameGameManager prefab.
         // This is convenient because it means that we can worry less about scenes containing the
         // correct scripts in order to run. All core dependencies will simply be loaded into any 
         // active scene when hitting the play button in the editor, or running the game in a standalone player.
@@ -55,7 +55,7 @@ namespace RootName.Core
             var gameManager = Instantiate(gameManagerPrefab);
 
             // Give the prefab a name. This name will match the name of the script component.
-            // For this codebase, that will be SunderpathGameManager.
+            // For this codebase, that will be RootNameGameManager.
             gameManager.name = gameManager.GetApplicationName();
             
             // Our GameManager should be persistent between scenes.
@@ -65,7 +65,7 @@ namespace RootName.Core
             instance = gameManager;
 
             // Call the protected method OnInitialized. This is empty in this abstract script,
-            // but has some logic in SunderpathGameManager, which inherits from GameManager.
+            // but has some logic in RootNameGameManager, which inherits from GameManager.
             gameManager.OnInitialized();
         }
 
@@ -365,7 +365,7 @@ namespace RootName.Core
             new Dictionary<Type, IMonoSystem>();
 
         // Bootstrap a MonoSystem into the game at runtime. This is called in
-        // OnInitialized in the SunderpathGameManager.
+        // OnInitialized in the RootNameGameManager.
         //
         // When bootstrapping a MonoSystem, we grab the MonoSystem's companion
         // MonoBehaviour class as a component from a GameObject.
@@ -425,13 +425,13 @@ namespace RootName.Core
 
 ## RootName Game Manager
 
-With all of these scripts together, we have formed the basis for our `SunderpathGameManager` script. This script is a component of the root `GameObject` in the `GameManager` prefab in "Assets/Resources", and is where the `GameManager` script's `protected override void OnInitialized()` is called, which is where all `MonoSystems` are bootstrapped into the game at runtime. Let's take a closer look at it:
+With all of these scripts together, we have formed the basis for our `RootNameGameManager` script. This script is a component of the root `GameObject` in the `GameManager` prefab in "Assets/Resources", and is where the `GameManager` script's `protected override void OnInitialized()` is called, which is where all `MonoSystems` are bootstrapped into the game at runtime. Let's take a closer look at it:
 
 ```csharp
 using RootName.Core;
 using UnityEngine;
 
-// The SunderpathGameManager script is a component of the root GameObject
+// The RootNameGameManager script is a component of the root GameObject
 // on the GameManager prefab in Assets/Resources.
 //
 // This script contains references to our MonoSystems parent Transform,
@@ -455,7 +455,7 @@ namespace RootName.Runtime
     //   instantiated, where we can perform post-instantiation 
     //   operations for bootstrapping the game, or anything else
     //   that may be needed.
-    internal sealed class SunderpathGameManager : GameManager
+    internal sealed class RootNameGameManager : GameManager
     {
         // For every MonoSystem created for the game:
         // - Create a child GameObject under the MonoSystemsParentTransform
@@ -479,10 +479,10 @@ namespace RootName.Runtime
 
         // We set the name of the instantiated GameManager prefab
         // to be the same as this script component. In our case,
-        // it will be name SunderpathGameManager.
+        // it will be name RootNameGameManager.
         protected override string GetApplicationName()
         {
-            return nameof(SunderpathGameManager);
+            return nameof(RootNameGameManager);
         }
 
         // OnInitialized() is called after the singleton GameManager
