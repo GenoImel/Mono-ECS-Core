@@ -2,7 +2,7 @@
 
 The core archicture for the game follows the philosophy of limiting the number of singletons in the codebase, and instead using a single `GameManager` singleton to coordinate communication between decoupled `MonoBehaviour` scripts using `Message Events`, as well as enabling code and data sharing between `MonoBehaviours` by providing access to `MonoSystems`. 
 
-This core architecture was originally created by a colleague that I studied under who worked at Unity Technologies. I am currently attempting to iterate on the architecture. Originally this architecture was created to play nice with Unity's `MonoBehaviour` lifecylce methods. I am, however, actively branching off from this architecture in order to make it cross-compatible with Unity's `Entity Systems`, which uses a similar but separate set of event-based lifecycle methods with the `interface` `ISystem` reserved.
+This core architecture was originally created by a colleague that I studied under. I am currently attempting to iterate on the architecture. Originally this architecture was created to play nice with Unity's `MonoBehaviour` lifecylce methods. I am, however, actively branching off from this architecture in order to make it cross-compatible with Unity's `Entity Systems`, which uses a similar but separate set of event-based lifecycle methods with the `interface` `ISystem` reserved.
 
 ## Game Manager
 
