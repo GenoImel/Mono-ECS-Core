@@ -1,4 +1,4 @@
-#Branching Strategy
+# Branching Strategy
 
 This document acts a quick-start guide for the GitHub Flow branching strategy. For more in-depth informaton on GitHub Flow, [please see GitHub's documentation.](https://docs.github.com/en/get-started/quickstart/github-flow).
 
