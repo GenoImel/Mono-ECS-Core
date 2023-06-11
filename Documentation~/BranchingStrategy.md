@@ -20,7 +20,7 @@ Our options for `{issue-label}` are as follows:
 When creating a pull request, there are a few suggested standards to adhere to: 
 
 - In the body of the pull request list changes, removed/renamed files, etc. and try to be as complete as possible.
-- After listing the changes, using [closing keywords](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to link the issue that the pull request addresses. This will ensure the pull request closes the issue once it is merged into `main`.
+- After listing the changes, use [closing keywords](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to link the issue that the pull request addresses. This will ensure the pull request closes the issue once it is merged into `main`.
 
 In the repository, the `main` branch is protected by a number of policies. In order for the pull request to be marked as ready to merge, the pull request must satisfy the following criteria:
 
