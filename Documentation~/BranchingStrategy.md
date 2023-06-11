@@ -11,9 +11,9 @@ Our primary branch is `main`, which will contain all of the latest changes in th
 
 Our options for `{issue-label}` are as follows:
 
-- Use `bugfix` for branches that are fixing a bug.
-- Use `feature` for branches that implement a new feature or functionality.
-- Use `documentation` for updating the repository's documentation
+- `bugfix` for branches that are fixing a bug.
+- `feature` for branches that implement a new feature or functionality.
+- `documentation` for updating the repository's documentation.
 
 ## Creating Pull Requests
 
@@ -28,6 +28,8 @@ In the repository, the `main` branch is protected by a number of policies. In or
 - Pull requests must be linked to an issue.
 - Any comments on the pull request must be resolved.
 - Approvals are reset when pushing additional commits to the source branch.
+
+Note that the above requirements may vary according to the specific policy settings for the `main` branch.
 
 ## Merging Pull Requests
 
