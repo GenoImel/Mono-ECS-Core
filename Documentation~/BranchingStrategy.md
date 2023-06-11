@@ -6,14 +6,14 @@ This document acts a quick-start guide for the GitHub Flow branching strategy. F
 
 Our primary branch is `main`, which will contain all of the latest changes in the repository. All branches should be created from `main`. When creating a new branch in the repository, we adhere to the following conventions:
 
-- For single issue branches: `{Issue-Label}/{issue-id}-{branch-title}` 
-- For multi-ssue branches: `{Issue-Label}/{issue-id-1}-{issue-id-n}-{branch-title}` 
+- For single issue branches: `{issue-label}/{issue-id}-{branch-title}` 
+- For multi-ssue branches: `{issue-label}/{issue-id-1}-{issue-id-n}-{branch-title}` 
 
-Our options for `{Issue-Label}` are as follows:
+Our options for `{issue-label}` are as follows:
 
-- Use `Bugfix` for branches that are fixing a bug.
-- Use `Feature` for branches that implement a new feature or functionality.
-- Use `Documentation` for updating the repository's documentation
+- Use `bugfix` for branches that are fixing a bug.
+- Use `feature` for branches that implement a new feature or functionality.
+- Use `documentation` for updating the repository's documentation
 
 ## Creating Pull Requests
 
